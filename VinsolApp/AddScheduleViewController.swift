@@ -104,7 +104,7 @@ class AddScheduleViewController: UIViewController {
 
             return
         }
-        else if(start.isGreaterThanInt(str: slotStartTime) || !end.isLessThanInt(str: slotEndTime)) {
+        else if(!start.isGreaterThanInt(str: slotStartTime) || !end.isLessThanInt(str: slotEndTime)) {
             presentAlert(alertTitle: "slect slot b/w \(slotStartTime) to \(slotEndTime)", alertMessage:  "")
         }
         var isexist = false

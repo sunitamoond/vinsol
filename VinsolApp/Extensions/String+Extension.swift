@@ -105,11 +105,16 @@ extension String {
             let suffix = self[range.upperBound...]
 
             if( (Int(newStr) ?? 0)  == str){
+                print(Int(suffix))
+                print((Int(suffix) ?? 0) >= 0)
                 return (Int(suffix) ?? 0) >= 0
             }
         }
+        print(Int(newStr) ?? 0)
+        print(str)
+        print((Int(newStr) ?? 0) > str)
 
-        return (Int(newStr) ?? 0) >= str
+        return ((Int(newStr) ?? 0) >= str)
     }
     func isLessThanInt(str: Int) -> Bool {
         let index = self.index(of: ":")
@@ -124,10 +129,13 @@ extension String {
             let suffix = self[range.upperBound...]
 
             if( (Int(newStr) ?? 0)  == str){
+                print(Int(suffix))
                 return (Int(suffix) ?? 0) <= 0
             }
         }
-
-        return (Int(newStr) ?? 0) <= str
+        print(Int(newStr) ?? 0)
+        print(str)
+        print((Int(newStr) ?? 0) <= str)
+        return ((Int(newStr) ?? 0) <= str)
     }
 }

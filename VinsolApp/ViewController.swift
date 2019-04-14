@@ -67,14 +67,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         interval = 7 - (endingDay - startingDay + 1)
-        var t = ["scd", "efdsf", "fsew"]
-        let fullName    = t.joined(separator: ", ")
-        let fullNameArr = fullName.components(separatedBy: ", ")
-        print(fullNameArr)
+
         var time = UserDefaults.standard.double(forKey: "date") as? Double
-        if(time != nil) {
-            currentDate = Date.init(timeIntervalSince1970: time ?? Double())
+
+        if let time = time, time > 1 {
+            print(time)
+            currentDate = Date.init(timeIntervalSince1970: time)
         }
+
         print(currentDate)
         fetchData();
         configureRefreshControl()
@@ -205,7 +205,6 @@ class ViewController: UIViewController {
         let settingBtn = UIButton(type: .system)
         settingBtn.imageView?.contentMode = .scaleAspectFit
         settingBtn.semanticContentAttribute = .forceRightToLeft
-//        settingBtn.setImage(UIImage(named: "right-arrow"), for: .normal)
         settingBtn.setTitle("SET", for: .normal)
         settingBtn.titleLabel?.font =  UIFont.boldSystemFont(ofSize: 20)
         settingBtn.addTarget(self, action: #selector(settingButtonAction(sender:)), for: .touchUpInside)
@@ -245,9 +244,6 @@ class ViewController: UIViewController {
             nextDay = nextDay?.getPrevDate(startingDay: startingDay, endingDay: endingDay, interval: interval)
 
         }
-//        if(date.isMonday()) {
-//            nextDay = nextDay?.prevYesterday;
-//        }
         guard let nextdate = nextDay else {
             return
         }
@@ -321,25 +317,17 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             cell.configure(schedules[indexPath.row]);
              return cell
         }
-
-
-
-
     }
 }
 
 extension ViewController: selectSettiongData {
     func initData(result: [Int]) {
-      startingDay = result[0] //Sunday
-       endingDay = result[1]
+       startingDay = result[0] //Sunday
+        endingDay = result[1]
         interval = 7 - (endingDay - startingDay + 1)
         slotStartTime = result[2];
         slotEndTime = result[3];
         diff = result[4];
-        print(startingDay)
-        print(endingDay);
-        print(interval);
-        print(diff);
         getSchedules(currentDate?.getFullDate() ?? "", currentDate)
     }
 }
