@@ -83,7 +83,10 @@ class SettingViewController: UIViewController {
     @IBAction func submitBtnAction(_ sender: Any) {
         if((result[2] == result[3]) || (result[2] > result[3])) {
            presentAlert(alertTitle: "please select valid start and end time", alertMessage:  "")
-        } else {
+        } else if((result[0] > result[1])) {
+            presentAlert(alertTitle: "please select valid start and end day", alertMessage:  "")
+
+        }else {
             delegate?.initData(result: result);
             navigationController?.popViewController(animated: true)
         }
