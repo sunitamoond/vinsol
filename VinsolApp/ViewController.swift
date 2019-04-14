@@ -32,11 +32,6 @@ class ViewController: UIViewController {
         }
     }
 
-    @IBAction func addScheduleMeetingBtnAction(_ sender: Any) {
-        let addScheduleVC = AddScheduleViewController(isPortrait: isPortrait, currentdate: currentDate, schedules: schedules)
-        self.navigationController?.pushViewController(addScheduleVC, animated: true)
-    }
-
     var schedules:[Schedule] = []
     var currentDate: Date? = nil;
     private var refreshControl = UIRefreshControl()
@@ -44,6 +39,9 @@ class ViewController: UIViewController {
     var startingDay = 6 //Sunday
     var endingDay = 6
     var interval = 0;
+    var slotStartTime = 9;//start hour
+    var slotEndTime = 17;//end hour
+    var diff = 30 //minute
 
     fileprivate func getOrientation() {
         if UIDevice.current.orientation.isLandscape {
@@ -65,14 +63,14 @@ class ViewController: UIViewController {
         super.viewWillTransition(to: size, with: coordinator)
         getOrientation()
     }
-
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         interval = 7 - (endingDay - startingDay + 1)
-
+        var t = ["scd", "efdsf", "fsew"]
+        let fullName    = t.joined(separator: ", ")
+        let fullNameArr = fullName.components(separatedBy: ", ")
+        print(fullNameArr)
         var time = UserDefaults.standard.double(forKey: "date") as? Double
         if(time != nil) {
             currentDate = Date.init(timeIntervalSince1970: time ?? Double())
@@ -82,21 +80,25 @@ class ViewController: UIViewController {
         configureRefreshControl()
         getOrientation()
         if(currentDate == nil) {
-           currentDate = Date();
+            currentDate = Date();
         }
         if(!(currentDate?.isValidDay(startingDay: startingDay, endingDay: endingDay, interval: interval) ?? true)) {
             currentDate = currentDate?.getNextDate(startingDay: startingDay, endingDay: endingDay, interval: interval)
 
         }
-//        if((currentDate?.yesterday?.isFriday() ?? false) || (currentDate?.prevYesterday?.isFriday() ?? false)) {
-//            currentDate = (currentDate?.yesterday?.isFriday() ?? false) ? currentDate?.nexTomorrow : currentDate?.tomorrow
-//        }
-
 
         getSchedules(currentDate?.getFullDate() ?? "", currentDate)
-//        configureTitle(currentDate?.getFullDate(true))
         configureNavigationBar()
-        }
+
+    }
+
+    @IBAction func addScheduleMeetingBtnAction(_ sender: Any) {
+        let addScheduleVC = AddScheduleViewController(isPortrait: isPortrait, currentdate: currentDate, schedules: schedules,startingDay: startingDay, endingDay: endingDay, interval: interval, slotStartTime: slotStartTime, slotEndTime: slotEndTime, diff: diff)
+        self.navigationController?.pushViewController(addScheduleVC, animated: true)
+    }
+
+
+
 
     func createData(data: [Schedule]) {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
@@ -110,7 +112,7 @@ class ViewController: UIViewController {
            newMeeting.setValue(data[i].startTime, forKey: "startTime")
              newMeeting.setValue(data[i].endTime, forKey: "endTime")
              newMeeting.setValue(data[i].description, forKey: "desc")
-            newMeeting.setValue(data[i].participants.joined(separator:" ,"), forKey: "participants")
+            newMeeting.setValue(data[i].participants.joined(separator:", "), forKey: "participants")
 
         }
         do {
@@ -151,7 +153,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        configureNavigationBar()
+
     }
 
     func emptyCoreData() {
@@ -195,13 +197,25 @@ class ViewController: UIViewController {
         let rightButton = UIButton(type: .system)
         rightButton.imageView?.contentMode = .scaleAspectFit
         rightButton.semanticContentAttribute = .forceRightToLeft
-        rightButton.setImage(UIImage(named: "right-arrow"), for: .normal)
+//        rightButton.setImage(UIImage(named: "right-arrow"), for: .normal)
         rightButton.setTitle("NEXT", for: .normal)
         rightButton.titleLabel?.font =  UIFont.boldSystemFont(ofSize: 20)
         rightButton.addTarget(self, action: #selector(rightButtonAction(sender:)), for: .touchUpInside)
         rightButton.sizeToFit()
+        let settingBtn = UIButton(type: .system)
+        settingBtn.imageView?.contentMode = .scaleAspectFit
+        settingBtn.semanticContentAttribute = .forceRightToLeft
+//        settingBtn.setImage(UIImage(named: "right-arrow"), for: .normal)
+        settingBtn.setTitle("SET", for: .normal)
+        settingBtn.titleLabel?.font =  UIFont.boldSystemFont(ofSize: 20)
+        settingBtn.addTarget(self, action: #selector(settingButtonAction(sender:)), for: .touchUpInside)
+        settingBtn.sizeToFit()
 
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightButton)
+        self.navigationItem.rightBarButtonItems = [UIBarButtonItem(customView: rightButton),UIBarButtonItem(customView: settingBtn)]
+
+    }
+     @objc func settingButtonAction(sender: UIBarButtonItem) {
+        self.navigationController?.pushViewController(SettingViewController(delegate: self), animated: true)
 
     }
     @objc func rightButtonAction(sender: UIBarButtonItem) {
@@ -209,13 +223,13 @@ class ViewController: UIViewController {
             return
         }
         var nextDay = date.tomorrow;
+        print(startingDay)
+        print(endingDay);
+        print(interval);
         if(!(nextDay?.isValidDay(startingDay: startingDay, endingDay: endingDay, interval: interval) ?? true)) {
             nextDay = nextDay?.getNextDate(startingDay: startingDay, endingDay: endingDay, interval: interval)
 
         }
-//        if(date.isFriday()) {
-//            nextDay = nextDay?.nexTomorrow;
-//        }
         guard let nextdate = nextDay else {
             return
         }
@@ -311,6 +325,22 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 
 
 
+    }
+}
+
+extension ViewController: selectSettiongData {
+    func initData(result: [Int]) {
+      startingDay = result[0] //Sunday
+       endingDay = result[1]
+        interval = 7 - (endingDay - startingDay + 1)
+        slotStartTime = result[2];
+        slotEndTime = result[3];
+        diff = result[4];
+        print(startingDay)
+        print(endingDay);
+        print(interval);
+        print(diff);
+        getSchedules(currentDate?.getFullDate() ?? "", currentDate)
     }
 }
 

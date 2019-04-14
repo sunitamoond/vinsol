@@ -14,7 +14,6 @@ class SlotTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
          self.backgroundColor = UIColor.init(rgb: 0xF3F3F3)
-        // Initialization code
     }
 
     func configure(schedule: Schedule) {

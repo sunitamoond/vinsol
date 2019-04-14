@@ -37,16 +37,14 @@ extension UIToolbar {
 }
 
 class AddScheduleViewController: UIViewController {
-    @IBOutlet weak var btnBottom: NSLayoutConstraint!
 
+    @IBOutlet weak var btnBottom: NSLayoutConstraint!
     @IBOutlet weak var textView: UITextView! {
         didSet{
-//            textView.isScrollEnabled = false
             textView.text = ""
             textView.textColor = .black
             textView.layer.borderWidth = 3;
             textView.layer.cornerRadius = 10;
-//            textView.layer.backgroundColor = UIColor.lightGray.cgColor
 
         }
     }
@@ -64,7 +62,6 @@ class AddScheduleViewController: UIViewController {
     @IBOutlet weak var startTimeTextFeild: UITextField!{
         didSet{
             startTimeTextFeild.isUserInteractionEnabled = true;
-//            startTimeTextFeild.backgroundColor = UIColor.black;
             startTimeTextFeild.layer.borderWidth = 3;
             startTimeTextFeild.layer.cornerRadius = 10;
             startTimeTextFeild.textAlignment = .center
@@ -102,6 +99,13 @@ class AddScheduleViewController: UIViewController {
             presentAlert(alertTitle: "fill all the filled", alertMessage:  "")
 
             return
+        } else if(start.isGreater(str: end)) {
+            presentAlert(alertTitle: "select valid interval", alertMessage:  "")
+
+            return
+        }
+        else if(start.isGreaterThanInt(str: slotStartTime) || !end.isLessThanInt(str: slotEndTime)) {
+            presentAlert(alertTitle: "slect slot b/w \(slotStartTime) to \(slotEndTime)", alertMessage:  "")
         }
         var isexist = false
         for i in 0...schedules.count-1 {
@@ -129,7 +133,7 @@ class AddScheduleViewController: UIViewController {
                     }
                 }
 
-                var slotvc = SlotsViewController.init(freeSlots: self?.freeSlots ?? [], indexs: indexs, currentdate: self?.currentdate, slots: slots)
+                var slotvc = SlotsViewController.init(freeSlots: self?.freeSlots ?? [], indexs: indexs, currentdate: self?.currentdate, slots: slots,startingDay: self?.startingDay ?? 0, endingDay: self?.endingDay ?? 0,interval: self?.interval ?? 0)
                 self?.navigationController?.pushViewController(slotvc, animated: true)
 
                 }, dismiss: false, persistenceTime: 1100000, exitAction: exitAction)
@@ -140,7 +144,7 @@ class AddScheduleViewController: UIViewController {
             action in
             self?.navigationController?.popViewController(animated: true)
         })
-        }
+    }
 
     }
 
@@ -180,8 +184,6 @@ class AddScheduleViewController: UIViewController {
     }
 
     var datePicker = UIDatePicker();
-    private var keyboardShowToken: Token?
-    private var keyboardHideToken: Token?
      var currentdate: Date? = nil
     var schedules:[Schedule] = [];
 
@@ -190,9 +192,19 @@ class AddScheduleViewController: UIViewController {
     var slotEndTime = 17;
     var diff = 30
     var freeSlots: [Bool] = []
+    var startingDay = 1
+    var endingDay = 5
+    var  interval = 2
 
-    convenience init(isPortrait: Bool, currentdate: Date?, schedules:[Schedule]) {
+    convenience init(isPortrait: Bool, currentdate: Date?, schedules:[Schedule], startingDay: Int, endingDay: Int, interval: Int, slotStartTime: Int, slotEndTime: Int, diff: Int) {
         self.init()
+
+        self.slotStartTime = slotStartTime;
+        self.slotEndTime = slotEndTime
+        self.diff = diff
+        self.startingDay = startingDay
+        self.endingDay = endingDay;
+        self.interval = interval;
         self.currentdate = currentdate
         self.isPortrait = isPortrait
         self.schedules = schedules;
@@ -248,7 +260,10 @@ class AddScheduleViewController: UIViewController {
         endTimeTextField.inputView = datePicker
         endTimePortTextFeild.inputView = datePicker
         datePicker.datePickerMode = .time
-        datePicker.minuteInterval = 30
+
+        datePicker.minuteInterval = diff
+        print(diff)
+
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
     }

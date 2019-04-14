@@ -30,7 +30,8 @@
 		41E1B8522263412B00D6713C /* SlotsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41E1B8502263412B00D6713C /* SlotsViewController.xib */; };
 		41E1B855226344D200D6713C /* SlotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E1B853226344D200D6713C /* SlotTableViewCell.swift */; };
 		41E1B856226344D200D6713C /* SlotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41E1B854226344D200D6713C /* SlotTableViewCell.xib */; };
-		41E289D8226308BC00C3A90B /* Keyboard+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E289D7226308BC00C3A90B /* Keyboard+Notification.swift */; };
+		41E1B85D22636B0400D6713C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E1B85B22636B0400D6713C /* SettingViewController.swift */; };
+		41E1B85E22636B0400D6713C /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41E1B85C22636B0400D6713C /* SettingViewController.xib */; };
 		AE9302E3504050EEFCDA2EAC /* Pods_VinsolApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A127B8B44F2DCE7A157A74 /* Pods_VinsolApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +61,8 @@
 		41E1B8502263412B00D6713C /* SlotsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlotsViewController.xib; sourceTree = "<group>"; };
 		41E1B853226344D200D6713C /* SlotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotTableViewCell.swift; sourceTree = "<group>"; };
 		41E1B854226344D200D6713C /* SlotTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlotTableViewCell.xib; sourceTree = "<group>"; };
-		41E289D7226308BC00C3A90B /* Keyboard+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+Notification.swift"; sourceTree = "<group>"; };
+		41E1B85B22636B0400D6713C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		41E1B85C22636B0400D6713C /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		A1A127B8B44F2DCE7A157A74 /* Pods_VinsolApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VinsolApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC9BEA2B5E8AC739E8153E0 /* Pods-VinsolApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinsolApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VinsolApp/Pods-VinsolApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F3804A657431E68BDD8376E4 /* Pods-VinsolApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinsolApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-VinsolApp/Pods-VinsolApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,7 +105,6 @@
 				41C508B522620E9C00370BC6 /* UIViewController+Extention.swift */,
 				41C508B722621C3900370BC6 /* Date+Extension.swift */,
 				41C508B922622FE700370BC6 /* String+Extension.swift */,
-				41E289D7226308BC00C3A90B /* Keyboard+Notification.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -149,6 +150,8 @@
 				41E1B8502263412B00D6713C /* SlotsViewController.xib */,
 				41E1B853226344D200D6713C /* SlotTableViewCell.swift */,
 				41E1B854226344D200D6713C /* SlotTableViewCell.xib */,
+				41E1B85B22636B0400D6713C /* SettingViewController.swift */,
+				41E1B85C22636B0400D6713C /* SettingViewController.xib */,
 			);
 			path = VinsolApp;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				411F5CC32261CC390035554E /* LandscapeTableViewCell.xib in Resources */,
+				41E1B85E22636B0400D6713C /* SettingViewController.xib in Resources */,
 				4181DAFA22619E4600FDE7B6 /* LaunchScreen.storyboard in Resources */,
 				4181DAF722619E4600FDE7B6 /* Assets.xcassets in Resources */,
 				41E1B856226344D200D6713C /* SlotTableViewCell.xib in Resources */,
@@ -306,8 +310,8 @@
 				411F5CBB2261AFD00035554E /* APIManager.swift in Sources */,
 				41C508B822621C3900370BC6 /* Date+Extension.swift in Sources */,
 				410B01E42261A830007BDE31 /* ScheduleManager.swift in Sources */,
-				41E289D8226308BC00C3A90B /* Keyboard+Notification.swift in Sources */,
 				411F5CBE2261CC260035554E /* PortaitTableViewCell.swift in Sources */,
+				41E1B85D22636B0400D6713C /* SettingViewController.swift in Sources */,
 				41C508BA22622FE700370BC6 /* String+Extension.swift in Sources */,
 				415973C22262007400012B8F /* UIColor+Extension.swift in Sources */,
 				41E1B855226344D200D6713C /* SlotTableViewCell.swift in Sources */,

@@ -20,21 +20,64 @@ class SlotsViewController: UIViewController {
         }
     }
 
-    @IBOutlet weak var submitBtn: UIButton!{
-        didSet{
-            submitBtn.setTitle(("Next day Slot Times").uppercased(), for: .normal)
-            submitBtn.backgroundColor = UIColor.init(rgb: 0x00A799)
-            submitBtn.setTitleColor(.white, for: .normal)
-            submitBtn.layer.cornerRadius = 8
-        }
-    }
     var freeSlots:[Bool] = []
-   var slots = [[String]]()
+    var slots = [[String]]()
     var currentDate: Date? = nil;
     var indexs:[Int] = [];
     var startingDay = 1
     var endingDay = 5
     var  interval = 2
+
+
+    convenience init(freeSlots: [Bool], indexs:[Int], currentdate: Date?, slots:[[String]], startingDay: Int, endingDay: Int, interval: Int) {
+        self.init()
+
+        self.startingDay = startingDay
+        self.endingDay = endingDay;
+        self.interval = interval;
+        self.indexs = indexs;
+        self.freeSlots = freeSlots
+        self.slots = slots
+        self.currentDate = currentdate;
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.reloadData()
+        configBtn()
+        configureNavigationBar()
+    }
+
+    @IBOutlet weak var submitBtn: UIButton!{
+        didSet{
+            submitBtn.setTitle(("check for next day").uppercased(), for: .normal)
+            submitBtn.backgroundColor = UIColor.init(rgb: 0x00A799)
+            submitBtn.setTitleColor(.white, for: .normal)
+            submitBtn.layer.cornerRadius = 8
+        }
+    }
+    func configBtn() {
+        submitBtn.isHidden = indexs.count >= 3
+        btnHieght.constant = (indexs.count >= 3) ? 0 : 50
+        btnTop.constant = (indexs.count >= 3) ? 0 : 16
+    }
+    func configureNavigationBar() {
+        title = currentDate?.getFullDate(true, false)
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
+        navigationController?.navigationBar.barTintColor = UIColor.init(rgb: 0x00A799)
+        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+
+        let leftButton = UIButton(type: .system)
+        leftButton.semanticContentAttribute = .forceLeftToRight
+        leftButton.imageView?.contentMode = .scaleAspectFit
+        leftButton.setImage(UIImage(named: "left-arrow"), for: .normal)
+        leftButton.setTitle("BACK", for: .normal)
+        leftButton.titleLabel?.font =  UIFont.boldSystemFont(ofSize: 20)
+        leftButton.sizeToFit()
+        leftButton.addTarget(self, action: #selector(leftButtonAction(sender:)), for: .touchUpInside)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftButton)
+    }
 
     func isOccupied(sch: Schedule, s: String, e: String) -> Bool {
         if((sch.startTime.isGreater(str: s) && sch.startTime.isGreater(str: e)) || (s.isGreater(str: sch.endTime) && e.isGreater(str: sch.endTime))) {
@@ -44,7 +87,7 @@ class SlotsViewController: UIViewController {
         return true;
 
     }
-    
+
     func refreshFreeslot(schedules:[Schedule]) {
         indexs = []
         for i in 0...slots.count-1{
@@ -59,10 +102,9 @@ class SlotsViewController: UIViewController {
             }
         }
 
-    
         tableView.reloadData();
         configBtn()
-                    
+
     }
 
     @IBAction func submitBtnAction(_ sender: Any) {
@@ -74,9 +116,6 @@ class SlotsViewController: UIViewController {
             nextDay = nextDay?.getNextDate(startingDay: startingDay, endingDay: endingDay, interval: interval)
 
         }
-        //        if(date.isFriday()) {
-        //            nextDay = nextDay?.nexTomorrow;
-        //        }
         guard let nextdate = nextDay else {
             return
         }
@@ -102,45 +141,6 @@ class SlotsViewController: UIViewController {
 
             return nil
         }
-    }
-
-
-    convenience init(freeSlots: [Bool], indexs:[Int], currentdate: Date?, slots:[[String]]) {
-        self.init()
-        self.indexs = indexs;
-        self.freeSlots = freeSlots
-        self.slots = slots
-        self.currentDate = currentdate;
-    }
-
-    func configBtn() {
-
-        submitBtn.isHidden = indexs.count >= 3
-        btnHieght.constant = (indexs.count >= 3) ? 0 : 50
-        btnTop.constant = (indexs.count >= 3) ? 0 : 16
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.reloadData()
-        configBtn()
-        configureNavigationBar()
-    }
-    func configureNavigationBar() {
-        title = currentDate?.getFullDate(true, false)
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
-        navigationController?.navigationBar.barTintColor = UIColor.init(rgb: 0x00A799)
-        navigationController?.navigationBar.tintColor = UIColor.white
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
-
-        let leftButton = UIButton(type: .system)
-        leftButton.semanticContentAttribute = .forceLeftToRight
-        leftButton.imageView?.contentMode = .scaleAspectFit
-        leftButton.setImage(UIImage(named: "left-arrow"), for: .normal)
-        leftButton.setTitle("BACK", for: .normal)
-        leftButton.titleLabel?.font =  UIFont.boldSystemFont(ofSize: 20)
-        leftButton.sizeToFit()
-        leftButton.addTarget(self, action: #selector(leftButtonAction(sender:)), for: .touchUpInside)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftButton)
     }
 
     @objc func leftButtonAction(sender: UIBarButtonItem) {
@@ -172,5 +172,5 @@ extension SlotsViewController: UITableViewDataSource, UITableViewDelegate {
         presentAlert(alertTitle: schedule.startTime.getTime() + " - " + schedule.endTime.getTime(), alertMessage: "confirm for this slot", actionTitle: "OK", actionHandler: { [weak self] action in
             self?.navigationController?.popViewController(animated: true)
         }, dismiss: false, persistenceTime: 1200, exitAction: exitAction)
-}
+    }
 }

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIViewController" customModule="VinsolApp" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Gkf-A0-sL5">
+                    <rect key="frame" x="20" y="40" width="335" height="60"/>
+                    <subviews>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0an-as-dYu">
+                            <rect key="frame" x="0.0" y="0.0" width="159.5" height="60"/>
+                        </pickerView>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W6X-C5-ARK">
+                            <rect key="frame" x="175.5" y="0.0" width="159.5" height="60"/>
+                        </pickerView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="XMa-OX-KMq"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lA6-nZ-zls">
+                    <rect key="frame" x="20" y="116" width="335" height="60"/>
+                    <subviews>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mEn-SE-CSA">
+                            <rect key="frame" x="0.0" y="0.0" width="159.5" height="60"/>
+                        </pickerView>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PTq-AC-Scf">
+                            <rect key="frame" x="175.5" y="0.0" width="159.5" height="60"/>
+                        </pickerView>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="rki-oH-rnG">
+                    <rect key="frame" x="20" y="196" width="335" height="60"/>
+                    <subviews>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubt-V4-QVs">
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
+                        </pickerView>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkx-qs-6f9">
+                    <rect key="frame" x="20" y="587" width="335" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Kkx-pt-oeq"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rki-oH-rnG" firstAttribute="height" secondItem="Gkf-A0-sL5" secondAttribute="height" id="8iV-VH-0Mf"/>
+                <constraint firstItem="lA6-nZ-zls" firstAttribute="top" secondItem="Gkf-A0-sL5" secondAttribute="bottom" constant="16" id="CJX-CW-LNp"/>
+                <constraint firstItem="rki-oH-rnG" firstAttribute="leading" secondItem="Gkf-A0-sL5" secondAttribute="leading" id="FKL-wI-ZBg"/>
+                <constraint firstItem="kkx-qs-6f9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Fmq-S9-wPX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kkx-qs-6f9" secondAttribute="trailing" constant="20" id="KRh-Ok-ytZ"/>
+                <constraint firstItem="lA6-nZ-zls" firstAttribute="height" secondItem="Gkf-A0-sL5" secondAttribute="height" id="Saj-UX-w4y"/>
+                <constraint firstItem="rki-oH-rnG" firstAttribute="top" secondItem="lA6-nZ-zls" secondAttribute="bottom" constant="20" id="TVo-M5-JQB"/>
+                <constraint firstItem="rki-oH-rnG" firstAttribute="trailing" secondItem="Gkf-A0-sL5" secondAttribute="trailing" id="apA-p1-kVU"/>
+                <constraint firstItem="kkx-qs-6f9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="rki-oH-rnG" secondAttribute="bottom" constant="16" id="bi7-lb-sOk"/>
+                <constraint firstItem="lA6-nZ-zls" firstAttribute="leading" secondItem="Gkf-A0-sL5" secondAttribute="leading" id="eha-mF-fS4"/>
+                <constraint firstItem="lA6-nZ-zls" firstAttribute="trailing" secondItem="Gkf-A0-sL5" secondAttribute="trailing" id="hTN-cC-GBm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kkx-qs-6f9" secondAttribute="bottom" constant="20" id="iFd-Rk-iBd"/>
+                <constraint firstItem="Gkf-A0-sL5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="nBR-e9-fkT"/>
+                <constraint firstItem="Gkf-A0-sL5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="wVR-vr-bqi"/>
+                <constraint firstAttribute="trailing" secondItem="Gkf-A0-sL5" secondAttribute="trailing" constant="20" id="zp1-yR-NXR"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

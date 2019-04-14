@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController" customModule="VinsolApp" customModuleProvider="target">
+            <connections>
+                <outlet property="endDay" destination="JCi-nT-7LN" id="vqv-51-y7i"/>
+                <outlet property="endTime" destination="OdD-cn-Ne1" id="jsL-k5-RG1"/>
+                <outlet property="slotDiff" destination="FX7-sI-0LP" id="Q2B-hG-QlI"/>
+                <outlet property="startDay" destination="mKg-aP-aCT" id="VCd-uD-y4B"/>
+                <outlet property="startTime" destination="xui-uf-Kf6" id="xhV-tM-Ep4"/>
+                <outlet property="submitBtn" destination="EUI-iw-zoS" id="g5y-vN-gIh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUI-iw-zoS">
+                    <rect key="frame" x="20" y="595" width="335" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="o8c-qW-J9i"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="submitBtnAction:" destination="-1" eventType="touchUpInside" id="U48-mD-pgy"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ND5-ad-PBu">
+                    <rect key="frame" x="20" y="30" width="335" height="100"/>
+                    <subviews>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mKg-aP-aCT">
+                            <rect key="frame" x="0.0" y="0.0" width="157.5" height="100"/>
+                        </pickerView>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCi-nT-7LN">
+                            <rect key="frame" x="177.5" y="0.0" width="157.5" height="100"/>
+                        </pickerView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Pmk-P4-Ybo"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lRi-nG-bjE">
+                    <rect key="frame" x="20" y="142" width="335" height="80"/>
+                    <subviews>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xui-uf-Kf6">
+                            <rect key="frame" x="0.0" y="0.0" width="157.5" height="80"/>
+                        </pickerView>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OdD-cn-Ne1">
+                            <rect key="frame" x="177.5" y="0.0" width="157.5" height="80"/>
+                        </pickerView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="dxB-L0-OLV"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IAC-gI-kGE">
+                    <rect key="frame" x="20" y="234" width="335" height="80"/>
+                    <subviews>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FX7-sI-0LP">
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="80"/>
+                        </pickerView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="Dfj-P9-m5Y"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ND5-ad-PBu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="4Hy-jQ-2qq"/>
+                <constraint firstItem="IAC-gI-kGE" firstAttribute="leading" secondItem="ND5-ad-PBu" secondAttribute="leading" id="5ke-aA-gGk"/>
+                <constraint firstItem="EUI-iw-zoS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="EUS-6P-6Au"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="EUI-iw-zoS" secondAttribute="bottom" constant="12" id="Kkj-aE-Zig"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EUI-iw-zoS" secondAttribute="trailing" constant="20" id="LgW-ih-M32"/>
+                <constraint firstAttribute="trailing" secondItem="ND5-ad-PBu" secondAttribute="trailing" constant="20" id="Ne8-V1-5Ra"/>
+                <constraint firstItem="lRi-nG-bjE" firstAttribute="top" secondItem="ND5-ad-PBu" secondAttribute="bottom" constant="12" id="RXn-1p-bZi"/>
+                <constraint firstItem="IAC-gI-kGE" firstAttribute="top" secondItem="lRi-nG-bjE" secondAttribute="bottom" constant="12" id="ZHn-md-Y3C"/>
+                <constraint firstItem="IAC-gI-kGE" firstAttribute="trailing" secondItem="ND5-ad-PBu" secondAttribute="trailing" id="bLt-kZ-Pfo"/>
+                <constraint firstItem="EUI-iw-zoS" firstAttribute="top" relation="greaterThanOrEqual" secondItem="IAC-gI-kGE" secondAttribute="bottom" constant="12" id="cqP-cH-VX5"/>
+                <constraint firstItem="lRi-nG-bjE" firstAttribute="leading" secondItem="ND5-ad-PBu" secondAttribute="leading" id="dyY-wl-DTc"/>
+                <constraint firstItem="lRi-nG-bjE" firstAttribute="trailing" secondItem="ND5-ad-PBu" secondAttribute="trailing" id="lKF-eQ-Ejf"/>
+                <constraint firstItem="ND5-ad-PBu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="yfZ-tL-S3m"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

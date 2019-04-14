@@ -28,6 +28,6 @@ extension Schedule {
         self.startTime = startTime;
         self.endTime = endTime
         self.description = description;
-        self.participants = [participants];
+        self.participants = participants.components(separatedBy: ", ");
     }
 }

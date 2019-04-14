@@ -72,11 +72,11 @@ extension Date {
             return Calendar.current.date(byAdding: .day, value: -1, to: self)
         }
 
-        if((day - 2) >= endingDay) {
-            var offset = endingDay - day + 2
+        if((day - 1) > endingDay) {
+            var offset = endingDay - day + 1
             return Calendar.current.date(byAdding: .day, value: offset, to: self)
         } else {
-            var offset = endingDay - 6  - day
+            var offset = endingDay - 7  - (day - 1)
             return Calendar.current.date(byAdding: .day, value: offset, to: self)
         }
     }

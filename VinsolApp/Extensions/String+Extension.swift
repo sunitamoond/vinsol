@@ -91,4 +91,43 @@ extension String {
         print(Int(newStr), Int(newStr1))
         return (Int(newStr) ?? 0) >= (Int(newStr1) ?? 0)
     }
+
+    func isGreaterThanInt(str: Int) -> Bool {
+        let index = self.index(of: ":")
+//        let index1 = str.index(of: ":")
+
+        guard let indexSelf = index else {
+            return true;
+        }
+        let newStr = self.substring(to: indexSelf)
+
+        if let range = self.range(of: ":") {
+            let suffix = self[range.upperBound...]
+
+            if( (Int(newStr) ?? 0)  == str){
+                return (Int(suffix) ?? 0) >= 0
+            }
+        }
+
+        return (Int(newStr) ?? 0) >= str
+    }
+    func isLessThanInt(str: Int) -> Bool {
+        let index = self.index(of: ":")
+        //        let index1 = str.index(of: ":")
+
+        guard let indexSelf = index else {
+            return true;
+        }
+        let newStr = self.substring(to: indexSelf)
+
+        if let range = self.range(of: ":") {
+            let suffix = self[range.upperBound...]
+
+            if( (Int(newStr) ?? 0)  == str){
+                return (Int(suffix) ?? 0) <= 0
+            }
+        }
+
+        return (Int(newStr) ?? 0) <= str
+    }
 }
