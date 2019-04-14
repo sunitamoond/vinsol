@@ -1,0 +1,6 @@
+framework module Pods_VinsolApp {
+  umbrella header "Pods-VinsolApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

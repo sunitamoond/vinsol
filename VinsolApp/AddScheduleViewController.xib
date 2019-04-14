@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddScheduleViewController" customModule="VinsolApp" customModuleProvider="target">
+            <connections>
+                <outlet property="btnBottom" destination="hmq-Xh-8NO" id="ML1-7j-9fl"/>
+                <outlet property="dateTextField" destination="RL5-v9-iJC" id="9pj-Na-BKJ"/>
+                <outlet property="dateTop" destination="TuG-a3-HPI" id="Qr0-hs-nGJ"/>
+                <outlet property="descTop" destination="feU-OP-Ylu" id="B7h-X1-VCZ"/>
+                <outlet property="descriptionTextField" destination="BKK-lp-mfB" id="Kal-bc-hYh"/>
+                <outlet property="endTimePortTextFeild" destination="6uV-tY-2ao" id="jfQ-Xf-Ud3"/>
+                <outlet property="endTimeTextField" destination="RGd-I5-OUB" id="CjD-Lh-Vo7"/>
+                <outlet property="startTimeTextFeild" destination="Zpu-Ac-8bd" id="12a-6b-DtL"/>
+                <outlet property="submitBtn" destination="Vcc-ZF-E2B" id="aBR-2k-iHD"/>
+                <outlet property="textView" destination="wKg-VT-BlK" id="8H9-l2-T9u"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RL5-v9-iJC">
+                    <rect key="frame" x="16" y="50" width="167.5" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="mt8-8y-oIK"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="E8b-fB-A8a">
+                    <rect key="frame" x="16" y="116" width="343" height="50"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zpu-Ac-8bd">
+                            <rect key="frame" x="0.0" y="0.0" width="167.5" height="50"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RGd-I5-OUB">
+                            <rect key="frame" x="175.5" y="0.0" width="167.5" height="50"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6uV-tY-2ao">
+                    <rect key="frame" x="16" y="182" width="343" height="50"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="hhhhhhhhhhhhhhhhhhhhhhhhh" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BKK-lp-mfB">
+                    <rect key="frame" x="16" y="248" width="343" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Bbs-td-3mN"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vcc-ZF-E2B">
+                    <rect key="frame" x="16" y="364" width="343" height="50"/>
+                    <color key="backgroundColor" red="0.0" green="0.65490196079999996" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="QXt-bc-TSJ"/>
+                    </constraints>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="submitBtnAction:" destination="-1" eventType="touchUpInside" id="Dze-6q-tHI"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wKg-VT-BlK">
+                    <rect key="frame" x="16" y="248" width="343" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="E8b-fB-A8a" firstAttribute="top" secondItem="RL5-v9-iJC" secondAttribute="bottom" constant="16" id="2IS-ed-OZb"/>
+                <constraint firstItem="Zpu-Ac-8bd" firstAttribute="width" secondItem="RL5-v9-iJC" secondAttribute="width" id="3Nc-Q8-Rny"/>
+                <constraint firstItem="6uV-tY-2ao" firstAttribute="height" secondItem="RL5-v9-iJC" secondAttribute="height" id="6u5-4t-ldD"/>
+                <constraint firstItem="6uV-tY-2ao" firstAttribute="leading" secondItem="E8b-fB-A8a" secondAttribute="leading" id="8jW-PB-Clj"/>
+                <constraint firstItem="6uV-tY-2ao" firstAttribute="top" secondItem="E8b-fB-A8a" secondAttribute="bottom" constant="16" id="CFh-KS-3V7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RL5-v9-iJC" secondAttribute="trailing" constant="16" id="DIo-nk-jbA"/>
+                <constraint firstItem="6uV-tY-2ao" firstAttribute="trailing" secondItem="E8b-fB-A8a" secondAttribute="trailing" id="FYX-Bc-mnq"/>
+                <constraint firstItem="BKK-lp-mfB" firstAttribute="top" secondItem="wKg-VT-BlK" secondAttribute="top" id="OUB-AW-1Ip"/>
+                <constraint firstItem="BKK-lp-mfB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="OpX-DC-NUx"/>
+                <constraint firstItem="RL5-v9-iJC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="TuG-a3-HPI"/>
+                <constraint firstItem="Vcc-ZF-E2B" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="WSp-OX-RRU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Vcc-ZF-E2B" secondAttribute="trailing" constant="16" id="Yu6-0V-n1g"/>
+                <constraint firstItem="Zpu-Ac-8bd" firstAttribute="trailing" secondItem="RL5-v9-iJC" secondAttribute="trailing" id="d2I-nI-o0l"/>
+                <constraint firstItem="Vcc-ZF-E2B" firstAttribute="top" secondItem="BKK-lp-mfB" secondAttribute="bottom" constant="16" id="fRb-v9-1mO"/>
+                <constraint firstItem="BKK-lp-mfB" firstAttribute="top" secondItem="6uV-tY-2ao" secondAttribute="bottom" constant="16" id="feU-OP-Ylu"/>
+                <constraint firstItem="RL5-v9-iJC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="fjB-j0-KJj"/>
+                <constraint firstItem="BKK-lp-mfB" firstAttribute="leading" secondItem="wKg-VT-BlK" secondAttribute="leading" id="g5L-c6-chC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Vcc-ZF-E2B" secondAttribute="bottom" constant="16" id="hmq-Xh-8NO"/>
+                <constraint firstItem="BKK-lp-mfB" firstAttribute="leading" secondItem="E8b-fB-A8a" secondAttribute="leading" id="ibH-ej-Zdw"/>
+                <constraint firstItem="Zpu-Ac-8bd" firstAttribute="height" secondItem="RL5-v9-iJC" secondAttribute="height" id="pfB-p4-6hr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BKK-lp-mfB" secondAttribute="trailing" constant="16" id="r77-xI-2nK"/>
+                <constraint firstItem="BKK-lp-mfB" firstAttribute="trailing" secondItem="E8b-fB-A8a" secondAttribute="trailing" id="s56-aW-8nf"/>
+                <constraint firstItem="BKK-lp-mfB" firstAttribute="trailing" secondItem="wKg-VT-BlK" secondAttribute="trailing" id="szz-ya-BkP"/>
+                <constraint firstItem="Zpu-Ac-8bd" firstAttribute="leading" secondItem="RL5-v9-iJC" secondAttribute="leading" id="unq-GG-dVd"/>
+                <constraint firstItem="BKK-lp-mfB" firstAttribute="bottom" secondItem="wKg-VT-BlK" secondAttribute="bottom" id="wPl-ku-eqI"/>
+                <constraint firstItem="RGd-I5-OUB" firstAttribute="height" secondItem="RL5-v9-iJC" secondAttribute="height" id="xM4-as-AzQ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.40000000000001" y="128.18590704647679"/>
+        </view>
+    </objects>
+</document>

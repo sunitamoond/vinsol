@@ -7,15 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410B01E42261A830007BDE31 /* ScheduleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B01E32261A830007BDE31 /* ScheduleManager.swift */; };
+		410B01EA2261AA78007BDE31 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B01E92261AA78007BDE31 /* Schedule.swift */; };
+		411F5CBB2261AFD00035554E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411F5CBA2261AFD00035554E /* APIManager.swift */; };
+		411F5CBE2261CC260035554E /* PortaitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411F5CBC2261CC260035554E /* PortaitTableViewCell.swift */; };
+		411F5CBF2261CC260035554E /* PortaitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 411F5CBD2261CC260035554E /* PortaitTableViewCell.xib */; };
+		411F5CC22261CC390035554E /* LandscapeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411F5CC02261CC390035554E /* LandscapeTableViewCell.swift */; };
+		411F5CC32261CC390035554E /* LandscapeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 411F5CC12261CC390035554E /* LandscapeTableViewCell.xib */; };
+		415973C22262007400012B8F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415973C12262007400012B8F /* UIColor+Extension.swift */; };
 		4181DAED22619E4500FDE7B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181DAEC22619E4500FDE7B6 /* AppDelegate.swift */; };
 		4181DAEF22619E4500FDE7B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181DAEE22619E4500FDE7B6 /* ViewController.swift */; };
 		4181DAF222619E4500FDE7B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4181DAF022619E4500FDE7B6 /* Main.storyboard */; };
 		4181DAF522619E4500FDE7B6 /* VinsolApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4181DAF322619E4500FDE7B6 /* VinsolApp.xcdatamodeld */; };
 		4181DAF722619E4600FDE7B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4181DAF622619E4600FDE7B6 /* Assets.xcassets */; };
 		4181DAFA22619E4600FDE7B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4181DAF822619E4600FDE7B6 /* LaunchScreen.storyboard */; };
+		41C508B622620E9C00370BC6 /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C508B522620E9C00370BC6 /* UIViewController+Extention.swift */; };
+		41C508B822621C3900370BC6 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C508B722621C3900370BC6 /* Date+Extension.swift */; };
+		41C508BA22622FE700370BC6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C508B922622FE700370BC6 /* String+Extension.swift */; };
+		41C508BD226264BD00370BC6 /* AddScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C508BB226264BD00370BC6 /* AddScheduleViewController.swift */; };
+		41C508BE226264BD00370BC6 /* AddScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41C508BC226264BD00370BC6 /* AddScheduleViewController.xib */; };
+		41E1B8512263412B00D6713C /* SlotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E1B84F2263412B00D6713C /* SlotsViewController.swift */; };
+		41E1B8522263412B00D6713C /* SlotsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41E1B8502263412B00D6713C /* SlotsViewController.xib */; };
+		41E1B855226344D200D6713C /* SlotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E1B853226344D200D6713C /* SlotTableViewCell.swift */; };
+		41E1B856226344D200D6713C /* SlotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41E1B854226344D200D6713C /* SlotTableViewCell.xib */; };
+		41E289D8226308BC00C3A90B /* Keyboard+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E289D7226308BC00C3A90B /* Keyboard+Notification.swift */; };
+		AE9302E3504050EEFCDA2EAC /* Pods_VinsolApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A127B8B44F2DCE7A157A74 /* Pods_VinsolApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		410B01E32261A830007BDE31 /* ScheduleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleManager.swift; sourceTree = "<group>"; };
+		410B01E92261AA78007BDE31 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		411F5CBA2261AFD00035554E /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		411F5CBC2261CC260035554E /* PortaitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortaitTableViewCell.swift; sourceTree = "<group>"; };
+		411F5CBD2261CC260035554E /* PortaitTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortaitTableViewCell.xib; sourceTree = "<group>"; };
+		411F5CC02261CC390035554E /* LandscapeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeTableViewCell.swift; sourceTree = "<group>"; };
+		411F5CC12261CC390035554E /* LandscapeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandscapeTableViewCell.xib; sourceTree = "<group>"; };
+		415973C12262007400012B8F /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		4181DAE922619E4500FDE7B6 /* VinsolApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VinsolApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4181DAEC22619E4500FDE7B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4181DAEE22619E4500FDE7B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +51,19 @@
 		4181DAF622619E4600FDE7B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4181DAF922619E4600FDE7B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4181DAFB22619E4600FDE7B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41C508B522620E9C00370BC6 /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
+		41C508B722621C3900370BC6 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		41C508B922622FE700370BC6 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		41C508BB226264BD00370BC6 /* AddScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScheduleViewController.swift; sourceTree = "<group>"; };
+		41C508BC226264BD00370BC6 /* AddScheduleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddScheduleViewController.xib; sourceTree = "<group>"; };
+		41E1B84F2263412B00D6713C /* SlotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotsViewController.swift; sourceTree = "<group>"; };
+		41E1B8502263412B00D6713C /* SlotsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlotsViewController.xib; sourceTree = "<group>"; };
+		41E1B853226344D200D6713C /* SlotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotTableViewCell.swift; sourceTree = "<group>"; };
+		41E1B854226344D200D6713C /* SlotTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlotTableViewCell.xib; sourceTree = "<group>"; };
+		41E289D7226308BC00C3A90B /* Keyboard+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+Notification.swift"; sourceTree = "<group>"; };
+		A1A127B8B44F2DCE7A157A74 /* Pods_VinsolApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VinsolApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFC9BEA2B5E8AC739E8153E0 /* Pods-VinsolApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinsolApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VinsolApp/Pods-VinsolApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F3804A657431E68BDD8376E4 /* Pods-VinsolApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinsolApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-VinsolApp/Pods-VinsolApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +71,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE9302E3504050EEFCDA2EAC /* Pods_VinsolApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		410B01E22261A79C007BDE31 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				410B01E32261A830007BDE31 /* ScheduleManager.swift */,
+				411F5CBA2261AFD00035554E /* APIManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		410B01E82261AA5B007BDE31 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				410B01E92261AA78007BDE31 /* Schedule.swift */,
+			);
+			name = Models;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		415973C02262005000012B8F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				415973C12262007400012B8F /* UIColor+Extension.swift */,
+				41C508B522620E9C00370BC6 /* UIViewController+Extention.swift */,
+				41C508B722621C3900370BC6 /* Date+Extension.swift */,
+				41C508B922622FE700370BC6 /* String+Extension.swift */,
+				41E289D7226308BC00C3A90B /* Keyboard+Notification.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4181DAE022619E4500FDE7B6 = {
 			isa = PBXGroup;
 			children = (
 				4181DAEB22619E4500FDE7B6 /* VinsolApp */,
 				4181DAEA22619E4500FDE7B6 /* Products */,
+				85DE0D11460C51A63117C77D /* Pods */,
+				68AF33923BAF008BBC78761E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +129,9 @@
 		4181DAEB22619E4500FDE7B6 /* VinsolApp */ = {
 			isa = PBXGroup;
 			children = (
+				415973C02262005000012B8F /* Extensions */,
+				410B01E82261AA5B007BDE31 /* Models */,
+				410B01E22261A79C007BDE31 /* API */,
 				4181DAEC22619E4500FDE7B6 /* AppDelegate.swift */,
 				4181DAEE22619E4500FDE7B6 /* ViewController.swift */,
 				4181DAF022619E4500FDE7B6 /* Main.storyboard */,
@@ -63,8 +139,35 @@
 				4181DAF822619E4600FDE7B6 /* LaunchScreen.storyboard */,
 				4181DAFB22619E4600FDE7B6 /* Info.plist */,
 				4181DAF322619E4500FDE7B6 /* VinsolApp.xcdatamodeld */,
+				411F5CBC2261CC260035554E /* PortaitTableViewCell.swift */,
+				411F5CBD2261CC260035554E /* PortaitTableViewCell.xib */,
+				411F5CC02261CC390035554E /* LandscapeTableViewCell.swift */,
+				411F5CC12261CC390035554E /* LandscapeTableViewCell.xib */,
+				41C508BB226264BD00370BC6 /* AddScheduleViewController.swift */,
+				41C508BC226264BD00370BC6 /* AddScheduleViewController.xib */,
+				41E1B84F2263412B00D6713C /* SlotsViewController.swift */,
+				41E1B8502263412B00D6713C /* SlotsViewController.xib */,
+				41E1B853226344D200D6713C /* SlotTableViewCell.swift */,
+				41E1B854226344D200D6713C /* SlotTableViewCell.xib */,
 			);
 			path = VinsolApp;
+			sourceTree = "<group>";
+		};
+		68AF33923BAF008BBC78761E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1A127B8B44F2DCE7A157A74 /* Pods_VinsolApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85DE0D11460C51A63117C77D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DFC9BEA2B5E8AC739E8153E0 /* Pods-VinsolApp.debug.xcconfig */,
+				F3804A657431E68BDD8376E4 /* Pods-VinsolApp.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4181DAFE22619E4600FDE7B6 /* Build configuration list for PBXNativeTarget "VinsolApp" */;
 			buildPhases = (
+				F8B62854518A39D2E45DB4D4 /* [CP] Check Pods Manifest.lock */,
 				4181DAE522619E4500FDE7B6 /* Sources */,
 				4181DAE622619E4500FDE7B6 /* Frameworks */,
 				4181DAE722619E4500FDE7B6 /* Resources */,
+				468987C2F7AF40B78B85D038 /* [CP] Embed Pods Frameworks */,
+				5CC43523C3A4146CAD102EEC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,21 +231,93 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				411F5CC32261CC390035554E /* LandscapeTableViewCell.xib in Resources */,
 				4181DAFA22619E4600FDE7B6 /* LaunchScreen.storyboard in Resources */,
 				4181DAF722619E4600FDE7B6 /* Assets.xcassets in Resources */,
+				41E1B856226344D200D6713C /* SlotTableViewCell.xib in Resources */,
+				41C508BE226264BD00370BC6 /* AddScheduleViewController.xib in Resources */,
 				4181DAF222619E4500FDE7B6 /* Main.storyboard in Resources */,
+				411F5CBF2261CC260035554E /* PortaitTableViewCell.xib in Resources */,
+				41E1B8522263412B00D6713C /* SlotsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		468987C2F7AF40B78B85D038 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VinsolApp/Pods-VinsolApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VinsolApp/Pods-VinsolApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CC43523C3A4146CAD102EEC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VinsolApp/Pods-VinsolApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8B62854518A39D2E45DB4D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VinsolApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4181DAE522619E4500FDE7B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				411F5CBB2261AFD00035554E /* APIManager.swift in Sources */,
+				41C508B822621C3900370BC6 /* Date+Extension.swift in Sources */,
+				410B01E42261A830007BDE31 /* ScheduleManager.swift in Sources */,
+				41E289D8226308BC00C3A90B /* Keyboard+Notification.swift in Sources */,
+				411F5CBE2261CC260035554E /* PortaitTableViewCell.swift in Sources */,
+				41C508BA22622FE700370BC6 /* String+Extension.swift in Sources */,
+				415973C22262007400012B8F /* UIColor+Extension.swift in Sources */,
+				41E1B855226344D200D6713C /* SlotTableViewCell.swift in Sources */,
 				4181DAF522619E4500FDE7B6 /* VinsolApp.xcdatamodeld in Sources */,
 				4181DAEF22619E4500FDE7B6 /* ViewController.swift in Sources */,
+				411F5CC22261CC390035554E /* LandscapeTableViewCell.swift in Sources */,
+				41E1B8512263412B00D6713C /* SlotsViewController.swift in Sources */,
+				410B01EA2261AA78007BDE31 /* Schedule.swift in Sources */,
+				41C508B622620E9C00370BC6 /* UIViewController+Extention.swift in Sources */,
+				41C508BD226264BD00370BC6 /* AddScheduleViewController.swift in Sources */,
 				4181DAED22619E4500FDE7B6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +462,7 @@
 		};
 		4181DAFF22619E4600FDE7B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFC9BEA2B5E8AC739E8153E0 /* Pods-VinsolApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +481,7 @@
 		};
 		4181DB0022619E4600FDE7B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3804A657431E68BDD8376E4 /* Pods-VinsolApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
